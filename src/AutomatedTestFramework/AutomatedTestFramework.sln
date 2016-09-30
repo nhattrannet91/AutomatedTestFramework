@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestFramework.Test", "AutomatedTestFramework\AutomatedTestFramework.Test.csproj", "{D9549667-A444-4CCD-A6AB-4D8C3DD9991C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestFramework.Common", "AutomatedTestFramework.Common\AutomatedTestFramework.Common.csproj", "{87D28999-4027-4361-BC9C-9E3459A6EB67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestFramework.ImportDataProcessing", "AutomatedTestFramework.ImportDataProcessing\AutomatedTestFramework.ImportDataProcessing.csproj", "{8BBC8A05-BB1E-443D-82D2-660D72367BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestFramework.ImportDataTest", "AutomatedTestFramework.ImportDataTest\AutomatedTestFramework.ImportDataTest.csproj", "{096D3498-6CDF-4A4F-8EB2-68F742BBD324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestFramework.WhiteFramework", "AutomatedTestFramework.WhiteFramework\AutomatedTestFramework.WhiteFramework.csproj", "{DD323B8A-3BAA-4641-AEDE-FFBA7A8270F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9549667-A444-4CCD-A6AB-4D8C3DD9991C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9549667-A444-4CCD-A6AB-4D8C3DD9991C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9549667-A444-4CCD-A6AB-4D8C3DD9991C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9549667-A444-4CCD-A6AB-4D8C3DD9991C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D28999-4027-4361-BC9C-9E3459A6EB67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D28999-4027-4361-BC9C-9E3459A6EB67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D28999-4027-4361-BC9C-9E3459A6EB67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D28999-4027-4361-BC9C-9E3459A6EB67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBC8A05-BB1E-443D-82D2-660D72367BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBC8A05-BB1E-443D-82D2-660D72367BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBC8A05-BB1E-443D-82D2-660D72367BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBC8A05-BB1E-443D-82D2-660D72367BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096D3498-6CDF-4A4F-8EB2-68F742BBD324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096D3498-6CDF-4A4F-8EB2-68F742BBD324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096D3498-6CDF-4A4F-8EB2-68F742BBD324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096D3498-6CDF-4A4F-8EB2-68F742BBD324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD323B8A-3BAA-4641-AEDE-FFBA7A8270F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD323B8A-3BAA-4641-AEDE-FFBA7A8270F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD323B8A-3BAA-4641-AEDE-FFBA7A8270F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD323B8A-3BAA-4641-AEDE-FFBA7A8270F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

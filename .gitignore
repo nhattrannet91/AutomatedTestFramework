@@ -1,0 +1,8 @@
+src/AutomatedTestFramework/AutomatedTestFramework.Common/obj/
+src/AutomatedTestFramework/AutomatedTestFramework.ImportDataProcessing/obj/
+src/AutomatedTestFramework/AutomatedTestFramework.ImportDataTest/obj/
+src/AutomatedTestFramework/AutomatedTestFramework.WhiteFramework/obj/
+src/AutomatedTestFramework/AutomatedTestFramework/obj/
+src/AutomatedTestFramework/AutomatedTestFramework.ImportDataTest/bin/
+src/AutomatedTestFramework/AutomatedTestFramework/bin/
+src/AutomatedTestFramework/AutomatedTestFramework.WhiteFramework/bin/
