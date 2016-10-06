@@ -1,5 +1,6 @@
 ﻿using System;
 using AutomatedTestFramework.Common.DTOs.Controls;
+using FlaUI.Core.AutomationElements.Infrastructure;
 using White.Core.UIItems;
 using Action = AutomatedTestFramework.Common.DTOs.Actions.Action;
 
@@ -21,7 +22,7 @@ namespace AutomatedTestFramework.WhiteFramework.Controls
         public override bool Isfocused { get; set; }
         public override bool Visible { get; set; }
 
-        public UIItem WhiteItem
+        public AutomationElement AutomationElement
         {
             get { return m_whiteButton; }
         }

@@ -1,6 +1,6 @@
 ﻿using AutomatedTestFramework.Common.DTOs.Controls;
-using White.Core.UIItems;
-using White.Core.UIItems.WindowItems;
+using FlaUI.Core.AutomationElements;
+using FlaUI.Core.AutomationElements.Infrastructure;
 
 namespace AutomatedTestFramework.WhiteFramework.Controls
 {
@@ -14,7 +14,7 @@ namespace AutomatedTestFramework.WhiteFramework.Controls
 
         #region Properties
 
-        public UIItem WhiteItem
+        public AutomationElement AutomationElement
         {
             get
             {
@@ -35,10 +35,10 @@ namespace AutomatedTestFramework.WhiteFramework.Controls
 
         #region Methods
 
-        public static WhiteWindow Wrap(UIItem item)
-        {
-            return new WhiteWindow((Window)item);
-        }
+        //public static WhiteWindow Wrap(UIItem item)
+        //{
+        //    return new WhiteWindow((Window)item);
+        //}
 
         #endregion Methods
     }
