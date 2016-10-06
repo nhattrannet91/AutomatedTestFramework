@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using AutomatedTestFramework.WhiteFramework;
 using NUnit.Framework;
 using System.IO;
 using System.Xml.Serialization;
+using AutomatedTestFramework.Common.Constants;
 using AutomatedTestFramework.Common.DTOs;
 using AutomatedTestFramework.Common.DTOs.Actions;
 using AutomatedTestFramework.Common.Services;
@@ -34,22 +36,19 @@ namespace AutomatedTestFramework.Test {
         public void TestTearDown() {
         }
 
-        [Test]
-        //[TestCaseSource("ImportTestData")]
-        public void TestCase()
+        [Test()]
+        [TestCaseSource("ImportTestData")]
+        public void TestCase(AutomaticTest test)
         {
-            var tests = ImportTestData();
-            tests.ForEach(test =>
-            {
-                ITestService service = new WhiteTestService();
-                var context = service.PrepareTestContext(test);
-                test.TestCases.ForEach(testCase => testCase.Execute(context));
-            });
+            ITestService service = new WhiteTestService();
+            var context = service.PrepareTestContext(test);
+            test.TestCases.ForEach(testCase => testCase.Execute(context));
         }
 
-        public static List<AutomaticTest> ImportTestData()
-        {
-            var paths = Directory.GetFiles(TestCaseDirectory, "*.xml");
+        public static List<AutomaticTest> ImportTestData() {
+
+            var dir = ConfigurationManager.AppSettings[FrameWorkConstants.TEST_CASE_DIRECTORY_KEY];
+            var paths = Directory.GetFiles(dir, "*.xml");
             var testCases = new List<AutomaticTest>();
             // TODO: return ImportTestDataService.ParseTestCases(paths);
             //       using Ninject to instantiate ImportTestDataService

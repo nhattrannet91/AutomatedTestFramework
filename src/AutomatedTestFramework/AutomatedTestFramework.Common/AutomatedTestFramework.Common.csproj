@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\FrameWorkConstants.cs" />
     <Compile Include="DTOs\Actions\Assert.cs" />
     <Compile Include="DTOs\Actions\Action.cs" />
     <Compile Include="DTOs\Actions\CatchWindow.cs" />
@@ -69,7 +70,6 @@
     <Compile Include="Services\ITestService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Constants\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

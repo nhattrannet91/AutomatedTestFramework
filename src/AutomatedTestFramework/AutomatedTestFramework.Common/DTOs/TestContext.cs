@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutomatedTestFramework.Common.Services;
 
@@ -8,39 +9,32 @@ namespace AutomatedTestFramework.Common.DTOs
     {
         #region Fields
 
-        private readonly Stack<BaseControl> m_controlStack;
-        private readonly IControlService m_controlService;
         private readonly string m_applicationPath;
-        private readonly string m_mainWindowTitle;
-        private readonly Dictionary<string, Step> m_commonSteps;
 
         #endregion
 
         #region Properties
 
-        public IControlService ControlService
-        {
-            get { return m_controlService; }
+        public IControlService ControlService {
+            get;
         }
 
-        public Stack<BaseControl> ControlStack
-        {
-            get { return m_controlStack; }
+        public Stack<BaseControl> ControlStack {
+            get;
         }
 
-        public Dictionary<string, Step> CommonSteps
-        {
-            get { return m_commonSteps; }
+        public Dictionary<string, Step> CommonSteps {
+            get;
         }
 
-        public string ApplicationPath
-        {
-            get { return m_applicationPath; }
+        public string ApplicationPath => m_applicationPath;
+
+        public string MainWindowTitle {
+            get;
         }
 
-        public string MainWindowTitle
-        {
-            get { return m_mainWindowTitle; }
+        public string ProcessName {
+            get;
         }
 
         #endregion
@@ -49,11 +43,13 @@ namespace AutomatedTestFramework.Common.DTOs
 
         public TestContext(IControlService controlService, AutomaticTest test)
         {
-            m_controlService = controlService;
+            ControlService = controlService;
             m_applicationPath = test.ApplicationPath;
-            m_mainWindowTitle = test.WindowTitle;
-            m_commonSteps = test.CommonSteps.ToDictionary(step => step.Id);
-            m_controlStack = new Stack<BaseControl>();
+            var index = m_applicationPath.LastIndexOf(@"\", StringComparison.Ordinal) + 1;
+            ProcessName = m_applicationPath.Substring(index, m_applicationPath.Length - index - 4);
+            MainWindowTitle = test.WindowTitle;
+            CommonSteps = test.CommonSteps.ToDictionary(step => step.Id);
+            ControlStack = new Stack<BaseControl>();
         }
 
         #endregion

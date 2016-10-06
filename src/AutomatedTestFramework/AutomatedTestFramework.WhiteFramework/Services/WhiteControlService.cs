@@ -45,11 +45,17 @@ namespace AutomatedTestFramework.WhiteFramework.Services
 
         private static BaseControl GetAndWrapControl<T>(TestContext context, ControlDescriptor controlDescriptor, Func<T, BaseControl> wrap) where T : UIItem
         {
-            if (controlDescriptor.ControlType == BaseWindow.ControlType)
-            {
-                // TODO Adapter later
-                var application = Application.Attach(Process.GetProcessesByName("ProcessName").First());
-                return new WhiteWindow(application.GetWindows().First(w => w.Title == "WindowTitle"));
+            if (controlDescriptor.ControlType == BaseWindow.ControlType) {
+
+                var application = Application.Attach(Process.GetProcessesByName(context.ProcessName).First());
+                return new WhiteWindow(application.GetWindows().First(w => w.Title == context.MainWindowTitle));
+
+                //var process = Process.GetProcessesByName(context.ProcessName);
+                //TestUtils.WaitUntil(() => (process = Process.GetProcessesByName(context.ProcessName)).Length > 0);
+                //var application = Application.Launch(context.ApplicationPath);
+                //Window window = null;
+                //TestUtils.WaitUntil(() => (window = application.GetWindow(context.MainWindowTitle, InitializeOption.NoCache)) != null);
+                //return new WhiteWindow(window);
             }
 
             var whiteControl = context.ControlStack.Peek() as IWhiteControl;
